@@ -46,7 +46,7 @@ return (
     <section className="relative z-10 max-w-2xl text-center space-y-6 my-auto">
     <div className="space-y-3">
         <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight text-[#f5f2eb]">
-        Welcome to <span className="text-[#c88346]">FolioForge</span>
+        Welcome to <span className="text-[#c88346]">Footlight</span>
         </h1>
         
         <p className="text-base md:text-lg text-[#a09a90] max-w-lg mx-auto leading-relaxed">

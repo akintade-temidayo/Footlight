@@ -20,8 +20,8 @@ sessionVersion: Number(user.sessionVersion || 0),
 })
 .setProtectedHeader({ alg: 'HS256' })
 .setIssuedAt()
-.setIssuer('folioforge')
-.setAudience('folioforge-user')
+.setIssuer('footlight')
+.setAudience('footlight-user')
 .setExpirationTime('7d')
 .sign(SECRET_KEY);
 
@@ -43,8 +43,8 @@ if (!token) return null;
 
 try {
 const { payload } = await jwtVerify(token, SECRET_KEY, {
-    issuer: 'folioforge',
-    audience: 'folioforge-user',
+    issuer: 'footlight',
+    audience: 'footlight-user',
 });
 
 await connectDB();

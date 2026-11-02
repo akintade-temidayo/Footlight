@@ -1,7 +1,7 @@
 import { createHash, randomInt } from 'crypto';
 
-const rateLimits = globalThis.__folioforgeAuthRateLimits || new Map();
-globalThis.__folioforgeAuthRateLimits = rateLimits;
+const rateLimits = globalThis.__footlightAuthRateLimits || new Map();
+globalThis.__footlightAuthRateLimits = rateLimits;
 
 export function normalizeEmail(value) {
   return String(value || '').trim().toLowerCase();

@@ -6,6 +6,7 @@ import Project from '@/models/Project';
 import Category from '@/models/Category';
 import Testimonial from '@/models/Testimonial';
 import Service from '@/models/Service';
+import { v2 as cloudinary } from 'cloudinary';
 import { getSession } from '@/lib/session';
 
 export async function GET() {
@@ -90,6 +91,7 @@ if (contentType.includes('application/json')) {
     socialLinksRaw: formData.get('socialLinks'),
     expertiseRaw: formData.get('expertise'),
     skillsRaw: formData.get('skills'),
+    avatarFile: formData.get('avatar'),
     };
 }
 
@@ -118,6 +120,33 @@ if (Array.isArray(bodyData.skills)) {
     updateFields.skills = bodyData.skills;
 } else if (bodyData.skillsRaw) {
     try { updateFields.skills = JSON.parse(bodyData.skillsRaw); } catch (e) {}
+}
+
+if (bodyData.avatarFile && typeof bodyData.avatarFile === 'object' && bodyData.avatarFile.size > 0) {
+    cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+    });
+
+    if (!process.env.CLOUDINARY_CLOUD_NAME || !process.env.CLOUDINARY_API_KEY || !process.env.CLOUDINARY_API_SECRET) {
+    throw new Error('Cloudinary environment variables are missing.');
+    }
+
+    const arrayBuffer = await bodyData.avatarFile.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    const uploadResult = await new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+        { folder: 'talent_avatars', resource_type: 'image' },
+        (error, result) => {
+        if (error) reject(error);
+        else resolve(result);
+        }
+    );
+    stream.end(buffer);
+    });
+
+    updateFields.avatarUrl = uploadResult.secure_url;
 }
 
 // Direct MongoDB update

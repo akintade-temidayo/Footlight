@@ -41,6 +41,7 @@ return (
             >
             <Image
                 src={userAvatar}
+                unoptimized
                 alt={name}
                 fill
                 sizes="64px"

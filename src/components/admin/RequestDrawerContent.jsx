@@ -65,7 +65,7 @@ return (
         </div>
     ) : (
         <form onSubmit={handleSubmit} className="space-y-5">
-        <input type="hidden" name="senderName" value={user?.name || 'FolioForge User'} />
+        <input type="hidden" name="senderName" value={user?.name || 'Footlight User'} />
         <input type="hidden" name="senderEmail" value={user?.email || 'No email provided'} />
         <input type="hidden" name="userHandle" value={user?.handle || 'N/A'} />
         <input type="hidden" name="requestType" value={requestType} />

@@ -27,10 +27,18 @@ return (
     <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between relative">
         {/* Profile / Brand Header  */}
         <Link href={aboutHref} className="flex items-center gap-3 group" title="View About Page">
+        <Image
+            src="/footlight-icon.svg"
+            alt="Footlight"
+            width={40}
+            height={40}
+            className="w-10 h-10 rounded-lg object-contain"
+        />
         {user?.avatarUrl || user?.avatar ? (
             <Image
             src={user?.avatarUrl || user?.avatar}
             alt={user.name || 'User Avatar'}
+            unoptimized
             width={40}
             height={40}
             className="w-10 h-10 rounded-full object-cover border border-(--border-subtle) group-hover:border-(--accent-warm) transition-colors"

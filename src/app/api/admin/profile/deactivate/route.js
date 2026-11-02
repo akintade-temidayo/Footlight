@@ -5,6 +5,9 @@ import Project from '@/models/Project';
 import Category from '@/models/Category';
 import Service from '@/models/Service';
 import Testimonial from '@/models/Testimonial';
+import Experience from '@/models/Experience';
+import Education from '@/models/Education';
+import Certification from '@/models/Certification';
 import { getSession, clearSession } from '@/lib/session';
 
 export async function DELETE(req) {
@@ -24,6 +27,9 @@ await Promise.all([
     Category.deleteMany({ userId: sessionId }),
     Service.deleteMany({ userId: sessionId }),
     Testimonial.deleteMany({ userId: sessionId }),
+    Experience.deleteMany({ userId: sessionId }),
+    Education.deleteMany({ user: sessionId }),
+    Certification.deleteMany({ user: sessionId }),
     User.findByIdAndDelete(sessionId),
 ]);
 

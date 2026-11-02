@@ -89,7 +89,7 @@ return (
     {/* Form Card Content */}
     <div className="relative z-10 w-full max-w-md text-center space-y-3 mb-6">
     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#c88346]/10 border border-[#c88346]/20 text-xs text-[#c88346] font-medium">
-        <Sparkles className="w-3.5 h-3.5" /> FolioForge Creator Network
+        <Sparkles className="w-3.5 h-3.5" /> Footlight Creator Network
     </div>
     <h1 className="text-3xl font-serif font-bold text-[#f5f2eb]">
         Claim Your Portfolio

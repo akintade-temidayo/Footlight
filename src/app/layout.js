@@ -3,10 +3,15 @@ import ToastProvider from '@/components/ui/ToastProvider';
 
 export const metadata = {
   title: {
-    default: 'FolioForge | Personal Portfolio',
+    default: 'Footlight | Personal Portfolio',
     template: '%s',
   },
   description: 'Showcase your creative work and technical projects.',
+  icons: {
+    icon: [{ url: '/icon.svg?v=2', type: 'image/svg+xml' }],
+    shortcut: [{ url: '/icon.svg?v=2', type: 'image/svg+xml' }],
+    apple: [{ url: '/icon.svg?v=2', type: 'image/svg+xml' }],
+  },
 };
 
 export default function RootLayout({ children }) {

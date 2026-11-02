@@ -6,7 +6,7 @@ import { Joyride, STATUS } from 'react-joyride';
 const STEPS = [
 {
     target: '[data-tour="tour-info-icon"]',
-    title: 'Welcome to FolioForge!',
+    title: 'Welcome to Footlight!',
     content: 'You can reopen this onboarding guide anytime by clicking this icon.',
     disableBeacon: true,
     placement: 'right',

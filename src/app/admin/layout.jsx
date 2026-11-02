@@ -73,7 +73,7 @@ React.useEffect(() => {
     if (window.innerWidth < 768) return;
 
     const userId = currentUser._id || currentUser.id;
-    const key = `folioforge_onboarding_${userId || 'guest'}`;
+    const key = `footlight_onboarding_${userId || 'guest'}`;
     const hasSeenGuide = localStorage.getItem(key);
 
     if (!hasSeenGuide) {
@@ -110,7 +110,6 @@ const navItems = [
     { label: 'Certifications', href: '/admin/certifications', icon: LiaCertificateSolid, tourId: 'tour-certifications' },
     { label: 'Testimonials', href: '/admin/testimonials', icon: Star, tourId: 'tour-testimonials' },
     { label: 'Resume / CV', href: '/admin/resume', icon: FileText },
-    { label: 'Profile', href: '/admin/profile', icon: User, tourId: 'tour-profile-nav' },
 ];
 
 const openOnboarding = () => {
@@ -132,7 +131,7 @@ const handleTourEnd = () => {
     setIsMobileMenuOpen(false);
     }
     const userId = currentUser?._id || currentUser?.id;
-    const key = `folioforge_onboarding_${userId || 'guest'}`;
+    const key = `footlight_onboarding_${userId || 'guest'}`;
     localStorage.setItem(key, 'true');
 };
 
@@ -198,7 +197,7 @@ return (
         <div className="flex items-center gap-3">
             <div className="relative w-8 h-8 rounded-lg bg-(--accent-warm) overflow-hidden flex items-center justify-center font-bold text-[#1c1917] text-sm shrink-0 border border-(--border-subtle)">
             {userAvatar ? (
-                <Image src={userAvatar} alt={userName} fill sizes="32px" className="object-cover" />
+                <Image src={userAvatar} alt={userName} fill sizes="32px" className="object-cover" unoptimized />
             ) : (
                 userInitial
             )}
@@ -247,7 +246,7 @@ return (
             <div className="flex items-center gap-3 mb-8 p-2 -mx-2 opacity-50 cursor-not-allowed">
             <div className="relative w-9 h-9 rounded-lg bg-(--accent-warm) overflow-hidden flex items-center justify-center font-bold text-[#1c1917] shrink-0 border border-(--border-subtle)">
                 {userAvatar ? (
-                <Image src={userAvatar} alt={userName} fill sizes="36px" className="object-cover" />
+                <Image src={userAvatar} alt={userName} fill sizes="36px" className="object-cover" unoptimized />
                 ) : (
                 userInitial
                 )}
@@ -262,7 +261,7 @@ return (
             <Link href="/admin/profile" className="flex items-center gap-3 flex-1 min-w-0">
                 <div className="relative w-9 h-9 rounded-lg bg-(--accent-warm) overflow-hidden flex items-center justify-center font-bold text-[#1c1917] shrink-0 border border-(--border-subtle)">
                 {userAvatar ? (
-                    <Image src={userAvatar} alt={userName} fill sizes="36px" className="object-cover" />
+                    <Image src={userAvatar} alt={userName} fill sizes="36px" className="object-cover" unoptimized />
                 ) : (
                     userInitial
                 )}

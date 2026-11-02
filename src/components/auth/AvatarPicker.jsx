@@ -27,7 +27,7 @@ return (
     {isUploading ? (
         <Loader2 className="w-5 h-5 animate-spin" style={{ color: 'var(--accent-warm)' }} />
     ) : avatarUrl ? (
-        <Image src={avatarUrl} alt="Profile preview" className="w-full h-full object-cover" fill />
+        <Image src={avatarUrl} alt="Profile preview" className="w-full h-full object-cover" fill unoptimized />
     ) : (
         <User className="w-7 h-7" style={{ color: 'var(--text-secondary)' }} />
     )}

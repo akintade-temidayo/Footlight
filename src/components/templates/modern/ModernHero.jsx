@@ -16,7 +16,8 @@ return (
     <div className="relative w-24 h-24 mx-auto rounded-full bg-(--accent-warm) overflow-hidden flex items-center justify-center font-bold text-[#1c1917] text-3xl shrink-0 border-2 border-(--border-subtle) shadow-md">
         {userAvatar ? (
         <Image 
-            src={userAvatar} 
+            src={userAvatar}
+        unoptimized
             alt={userName} 
             fill 
             loading="eager"
