@@ -5,7 +5,6 @@ import MinimalHero from '@/components/templates/minimal/MinimalHero';
 import MinimalProjects from '@/components/templates/minimal/MinimalProjects';
 import MinimalExperience from '@/components/templates/minimal/MinimalExperience';
 import MinimalEducation from '@/components/templates/minimal/MinimalEducation';
-import MinimalCertifications from '@/components/templates/minimal/MinimalCertifications';
 import MinimalServices from '@/components/templates/minimal/MinimalServices';
 import MinimalTestimonials from '@/components/templates/minimal/MinimalTestimonials';
 import AnimatedSection from '@/components/portfolio/AnimatedSection';
@@ -27,7 +26,6 @@ return (
     <AnimatedSection delay={0.04}><MinimalProjects projects={projects} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><MinimalExperience experiences={experiences} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><MinimalEducation education={education} userHandle={userHandle} /></AnimatedSection>
-    <AnimatedSection delay={0.04}><MinimalCertifications certifications={certifications} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><MinimalServices services={services} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><MinimalTestimonials testimonials={testimonials} userHandle={userHandle} /></AnimatedSection>
     </div>

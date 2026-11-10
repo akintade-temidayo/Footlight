@@ -2,7 +2,6 @@ import ModernHero from '@/components/templates/modern/ModernHero';
 import ModernProjects from '@/components/templates/modern/ModernProjects';
 import ModernExperience from '@/components/templates/modern/ModernExperience';
 import ModernEducation from '@/components/templates/modern/ModernEducation';
-import ModernCertifications from '@/components/templates/modern/ModernCertifications';
 import ModernServices from '@/components/templates/modern/ModernServices';
 import ModernTestimonials from '@/components/templates/modern/ModernReviews';
 import ScrollToHashOnLoad from '@/components/portfolio/ScrollToHashOnLoad';
@@ -27,7 +26,6 @@ return (
     <AnimatedSection delay={0.04}><ModernProjects projects={projects} handle={handle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><ModernExperience experiences={experiences} handle={handle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><ModernEducation education={education} handle={handle} /></AnimatedSection>
-    <AnimatedSection delay={0.04}><ModernCertifications certifications={certifications} handle={handle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><ModernServices services={services} handle={handle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><ModernTestimonials testimonials={testimonials} handle={handle} /></AnimatedSection>
     </div>

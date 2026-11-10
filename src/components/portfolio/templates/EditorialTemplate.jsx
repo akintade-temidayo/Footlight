@@ -5,7 +5,6 @@ import EditorialHero from '@/components/templates/editorial/EditorialHero';
 import EditorialProjects from '@/components/templates/editorial/EditorialProjects';
 import EditorialExperience from '@/components/templates/editorial/EditorialExperience';
 import EditorialEducation from '@/components/templates/editorial/EditorialEducation';
-import EditorialCertifications from '@/components/templates/editorial/EditorialCertifications';
 import EditorialServices from '@/components/templates/editorial/EditorialServices';
 import EditorialTestimonials from '@/components/templates/editorial/EditorialTestimonials';
 import AnimatedSection from '@/components/portfolio/AnimatedSection';
@@ -27,7 +26,6 @@ return (
     <AnimatedSection delay={0.04}><EditorialProjects projects={projects} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><EditorialExperience experiences={experiences} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><EditorialEducation education={education} userHandle={userHandle} /></AnimatedSection>
-    <AnimatedSection delay={0.04}><EditorialCertifications certifications={certifications} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><EditorialServices services={services} userHandle={userHandle} /></AnimatedSection>
     <AnimatedSection delay={0.04}><EditorialTestimonials testimonials={testimonials} userHandle={userHandle} /></AnimatedSection>
     </div>

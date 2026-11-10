@@ -5,7 +5,6 @@ import BentoHero from '@/components/templates/bento/BentoHero';
 import BentoProjects from '@/components/templates/bento/BentoProjects';
 import BentoExperience from '@/components/templates/bento/BentoExperience';
 import BentoEducation from '@/components/templates/bento/BentoEducation';
-import BentoCertifications from '@/components/templates/bento/BentoCertifications';
 import BentoServices from '@/components/templates/bento/BentoServices';
 import BentoTestimonials from '@/components/templates/bento/BentoTestimonials';
 import AnimatedSection from '@/components/portfolio/AnimatedSection';
@@ -34,9 +33,6 @@ return (
 
     {/* 4. Bento Education */}
     <AnimatedSection delay={0.04}><BentoEducation education={education} userHandle={userHandle} /></AnimatedSection>
-
-    {/* 5. Bento Certifications */}
-    <AnimatedSection delay={0.04}><BentoCertifications certifications={certifications} userHandle={userHandle} /></AnimatedSection>
 
     {/* 6. Bento Services */}
     <AnimatedSection delay={0.04}><BentoServices services={services} userHandle={userHandle} /></AnimatedSection>
