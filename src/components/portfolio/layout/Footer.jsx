@@ -65,13 +65,6 @@ return (
     {/* Brand Info & Dynamic Socials */}
     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-4">
         <div className="flex items-center gap-3">
-        <Image
-            src="/footlight-icon.svg"
-            alt="Footlight"
-            width={44}
-            height={44}
-            className="w-11 h-11 rounded-lg object-contain"
-        />
         <div className="space-y-1">
         <h3 className="font-serif font-bold text-lg sm:text-xl text-(--text-primary)">
             {user?.name || 'Portfolio'}
